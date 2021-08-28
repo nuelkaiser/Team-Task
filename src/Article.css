@@ -14,3 +14,12 @@ overflow-y: overlay;
   padding: 10px;
   margin-top: 40px;
 }
+
+.article > h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.article > p {
+  color: grey;
+}
