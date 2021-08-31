@@ -1,19 +1,17 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { BrowserRouter as
+Router,
+Route,
+Switch} from 'react-router-dom';
 import './style.css';
 import Post from './Post';
 export default function App() {
-  const [Blog, setBlog] = useState(null)
-
-  useEffect(
-    () => {
-      fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json()).then(data => setBlog(data))
-    }
-  )
 
   return (
+    <Router>
     <div>
-      {Blog && <Post blogs = {Blog}/>}
+      <Route exact path = '/' component =   {Post} />
     </div>
+    </Router>
   )
 }
